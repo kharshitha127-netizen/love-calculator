@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <div class="box1">
+        <h2>Love Calculator 💕</h2>
+         <h3>Your Name</h3>
+         <input type="text" id="yourname"><br>
+         <h3>Crush Name</h3>
+         <input type="text" id="crushname"><br>
+         <button onclick="love()">Check Result</button>
+ <p id="result"></p>
+    </div>
+</head>
+<body>
+<script>
+    function love() {
+        var yourname = document.getElementById("yourname").value;
+        var crushname=document.getElementById("crushname").value;
+        var marks = Math.floor(Math.random() * 101);
+        var resultText = "";
+        var resultClass = "";
+        if (marks < 10) {
+            resultText = yourname + "💔"+ crushname+" leave, it won't work" +marks+"%";
+            resultClass = "fail";
+        }
+        else {
+            resultClass = "Pass";
+        }
+        if (marks >= 100) {
+            resultText = yourname + "❤️"+ crushname + " Marrige will happen definetly "+marks+"%";
+        }
+        else if (marks >=55 ) {
+            resultText = yourname + "❤️"+ crushname+" Made for each other 😍"+marks+"%";
+        }
+        else if (marks >= 35) {
+            resultText = yourname + "❤️"+ crushname+" it can workout at first but it won't last longer 😓"+marks+"%";
+        }
+        else {
+            resultText = "love is not for you😒";
+        }
+        document.getElementById("result").innerText = resultText;
+    }
+</script>
+<style>body{
+    margin: 0;
+    padding: 30px; 
+    height : 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start; 
+    background-image: url("https://tse1.mm.bing.net/th/id/OIP.Xbnm_73csYQpXS9X3-E49wHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box1{
+width: 500px;
+height: 250px;
+border-radius: 20px;
+backdrop-filter: blur(5px);
+border: 1px solid black;
+align-items: top;
+justify-content: left;
+text-align: center;
+color: azure;
+    }
+
+    </style>
+</body>
+</html>
